@@ -18,7 +18,7 @@
   <version>0.1.5</version>
   <packaging>jar</packaging>
   
-  <name>annotator_Project</name>
+  <name>deep_debleach</name>
   <!-- <url>http://maven.apache.org</url> -->
   
   <!-- according to imageJ example plugin project we need these elements too -->
