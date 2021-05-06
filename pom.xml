@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  	<!-- imagej parent project -->
+  	
+  	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>27.0.1</version>
+		<relativePath/>
+	</parent>
+	
+	
+  <groupId>org.sdu</groupId>
+  <artifactId>Deep_Debleach</artifactId>
+  <version>0.1.3</version>
+  <packaging>jar</packaging>
+  
+  <name>deep_debleach</name>
+  <!-- <url>http://maven.apache.org</url> -->
+  
+  <!-- according to imageJ example plugin project we need these elements too -->
+	<description>Deep learning based correction for bleached microscopy images</description>
+	<url>https://github.com/oakenmount</url>
+	<inceptionYear>2021</inceptionYear>
+	<organization>
+		<name>SDU</name>
+	</organization>
+	<licenses>
+		<license>
+			<name> </name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>oakenmount</id>
+			<name>Jacob Egebjerg</name>
+			<url> </url>
+			<roles>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>None</name>
+			<url>None</url>
+			<roles><role>support</role></roles>
+			<properties><id>None</id></properties>
+		</contributor>
+	</contributors>
+	
+	<mailingLists>
+		<mailingList>
+			<name>None</name>
+			<archive>None</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/oakenmount/deepdebleach</connection>
+		<developerConnection>scm:git:git@github.com/oakenmount/deepdebleach</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/oakenmount/deepdebleach</url>
+	</scm>
+	<issueManagement>
+		<system>None</system>
+	</issueManagement>
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <package-name>org.sdu.Deep_Debleach</package-name>
+	<main-class>org.sdu.Deep_Debleach</main-class> 
+	<license.licenseName>GNU GPL-v3</license.licenseName>
+	<license.copyrightOwners>Jacob Egebjerg</license.copyrightOwners>
+	
+
+	 
+	<dl4j.version>1.0.0-beta7</dl4j.version> <!-- 1.0.0-beta6 -->
+	<nd4j.version>1.0.0-beta7</nd4j.version>
+		
+  </properties>
+ 
+	
+  
+  
+  
+  <!-- DEPENDENCIES -->
+  <dependencies>
+   
+    
+    <!-- DL4J, ND4J dependencies -->
+    <dependency>
+    	<groupId>org.deeplearning4j</groupId>
+    	<artifactId>deeplearning4j-core</artifactId>
+    	<version>${dl4j.version}</version>
+    </dependency>
+
+    <dependency>
+    	<groupId>org.nd4j</groupId>
+    	<artifactId>nd4j-native-platform</artifactId>
+    	<version>${nd4j.version}</version>
+    </dependency>
+
+    
+    <dependency>
+    	<groupId>org.nd4j</groupId>
+    	<artifactId>nd4j-api</artifactId>
+    	<version>${nd4j.version}</version>
+    </dependency>
+            
+    <dependency>
+    	<groupId>net.imagej</groupId>
+    	<artifactId>ij</artifactId>
+    </dependency>
+
+
+    <dependency>
+    	<groupId>org.bytedeco</groupId>
+    	<artifactId>javacpp</artifactId>
+    	<version>1.5.5</version>
+    </dependency>
+    
+	<dependency>
+	    <groupId>org.bytedeco</groupId>
+	    <artifactId>hdf5</artifactId>
+	    <version>1.12.0-1.5.5</version>
+	</dependency>
+
+    
+  </dependencies>   
+   
+</project>
